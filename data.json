@@ -22,45 +22,45 @@
   "socials": [
     {
       "name": "TikTok Official",
-      "url": "https://tiktok.com",
+      "url": "https://www.tiktok.com/@phucbua_gta5?is_from_webapp=1&sender_device=pc",
       "icon": "fa-brands fa-tiktok",
       "color": "from-pink-500 to-rose-500",
       "desc": "Xem highlight GTA 5 tấu hài"
     },
     {
       "name": "Facebook Gaming",
-      "url": "https://facebook.com",
+      "url": "https://www.facebook.com/fucbuas/",
       "icon": "fa-brands fa-facebook",
       "color": "from-blue-600 to-sky-500",
       "desc": "Livestream trực tiếp mỗi tối"
     },
     {
       "name": "YouTube Channel",
-      "url": "https://youtube.com",
+      "url": "https://www.youtube.com/@fucbuas",
       "icon": "fa-brands fa-youtube",
       "color": "from-red-600 to-rose-600",
       "desc": "Xem vlog & full series RP"
     },
     {
-      "name": "Discord Cộng Đồng Búa Thủ",
-      "url": "https://discord.com",
+      "name": "Discord Cá nhân",
+      "url": "https://discord.com/users/420261496510087169",
       "icon": "fa-brands fa-discord",
       "color": "from-indigo-600 to-blue-600",
-      "desc": "Giao lưu, chém gió cùng anh em búa thủ"
+      "desc": "Trao đổi công việc"
     },
     {
-      "name": "Discord Server GTA 5 RP (City)",
-      "url": "https://discord.com",
+      "name": "Discord Server RVN CITY (Server GTA 5 Roleplay)",
+      "url": "https://discord.gg/kGCKyfWpN6",
       "icon": "fa-brands fa-discord",
       "color": "from-violet-600 to-indigo-600",
-      "desc": "Tham gia thành phố Roleplay & nhận Whitelist"
+      "desc": " (Server GTA 5 Roleplay)"
     },
     {
-      "name": "Discord Liên Hệ / Support",
-      "url": "https://discord.com",
+      "name": "Discord Server NEXUS CITY",
+      "url": "https://discord.gg/wBcMk4K2rc",
       "icon": "fa-brands fa-discord",
       "color": "from-purple-600 to-fuchsia-600",
-      "desc": "Hỗ trợ kỹ thuật, sự kiện & giải đáp thắc mắc"
+      "desc": " (Server GTA 5 Roleplay)"
     }
   ],
   "pcSetup": {
