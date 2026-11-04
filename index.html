@@ -329,7 +329,7 @@
             </div>
 
             <div class="px-6 pb-6 -mt-16 relative z-10">
-                <div id="avatar-frame-box" class="avatar-frame-wrapper frame-nitro-plasma group cursor-pointer select-none" onclick="handleSecretAvatarTap()">
+                <div id="avatar-frame-box" class="avatar-frame-wrapper frame-cyberpunk group cursor-pointer select-none" onclick="handleSecretAvatarTap()">
                     <div class="avatar-neon-aura"></div>
                     <div class="avatar-spinning-ring"></div>
                     <svg class="avatar-dashed-ring" viewBox="0 0 140 140">
@@ -887,17 +887,17 @@
 
             <div id="github-upload-progress" class="p-3.5 rounded-2xl bg-sky-500/20 border border-sky-400/40 text-xs text-sky-200 flex items-center gap-3">
                 <i class="fa-solid fa-circle-notch fa-spin text-lg text-sky-400"></i>
-                <span id="github-upload-status-text">Đang đẩy file index.html lên GitHub...</span>
+                <span id="github-upload-status-text">Đang đồng bộ dữ liệu lên GitHub...</span>
             </div>
 
             <div class="space-y-6 pt-1">
                 <div class="flex gap-1.5 bg-white/5 p-1 rounded-xl overflow-x-auto">
                     <button onclick="switchAdminTab('profile')" id="tab-btn-profile" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition whitespace-nowrap">Hồ sơ &amp; Bank</button>
-                    <button onclick="switchAdminTab('music')" id="tab-btn-music" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg bg-white/20 text-white transition whitespace-nowrap">🎵 Nhạc nền</button>
+                    <button onclick="switchAdminTab('music')" id="tab-btn-music" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition whitespace-nowrap">🎵 Nhạc nền</button>
                     <button onclick="switchAdminTab('socials')" id="tab-btn-socials" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition whitespace-nowrap">Mạng Xã Hội</button>
                     <button onclick="switchAdminTab('pc')" id="tab-btn-pc" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition whitespace-nowrap">🖥️ Cấu hình PC</button>
                     <button onclick="switchAdminTab('affiliates')" id="tab-btn-affiliates" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition whitespace-nowrap">Affiliate</button>
-                    <button onclick="switchAdminTab('github')" id="tab-btn-github" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg text-slate-400 hover:text-white transition whitespace-nowrap"><i class="fa-brands fa-github mr-1"></i>GitHub</button>
+                    <button onclick="switchAdminTab('github')" id="tab-btn-github" class="flex-1 py-2 px-2 text-xs font-semibold rounded-lg bg-white/20 text-white transition whitespace-nowrap"><i class="fa-brands fa-github mr-1"></i>GitHub</button>
                 </div>
 
                 <!-- Tab 1: Profile & Bank -->
@@ -980,7 +980,7 @@
                 </div>
 
                 <!-- Tab: Background Music -->
-                <div id="admin-tab-music" class="space-y-4">
+                <div id="admin-tab-music" class="space-y-4 hidden">
                     <h3 class="text-sm font-bold text-rose-400 uppercase tracking-wider"><i class="fa-solid fa-music mr-1.5"></i> Cài đặt Nhạc Nền</h3>
                     <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-3">
                         <label for="admin-mp3-upload" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-500/30 to-teal-600/30 hover:from-emerald-500/40 hover:to-teal-600/40 border border-emerald-400/40 text-xs font-bold text-white cursor-pointer flex items-center justify-center gap-2 transition ios-toggle-btn">
@@ -1186,7 +1186,7 @@
                 </div>
 
                 <!-- Tab: GitHub Config -->
-                <div id="admin-tab-github" class="space-y-4 hidden">
+                <div id="admin-tab-github" class="space-y-4">
                     <div class="p-4 rounded-2xl bg-gradient-to-br from-emerald-500/15 to-sky-500/15 border border-emerald-400/30 space-y-3">
                         <h3 class="text-sm font-bold text-emerald-300 flex items-center gap-2">
                             <i class="fa-brands fa-github text-base"></i> Kết nối GitHub API
@@ -1220,10 +1220,7 @@
                     </button>
                     <div class="flex gap-2">
                         <button onclick="closeAdminModal()" class="px-4 py-2.5 rounded-xl bg-white/10 text-white text-xs font-semibold transition">Hủy</button>
-                        <button id="btn-save-and-push" onclick="saveAndPushToGitHub()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold shadow-lg transition flex items-center gap-2">
-                            <i class="fa-brands fa-github text-sm"></i>
-                            <span>Lưu &amp; Đẩy thẳng lên GitHub</span>
-                        </button>
+                        <button id="btn-save-and-push" onclick="saveAndPushToGitHub()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold shadow-lg transition flex items-center gap-2" disabled=""><i class="fa-solid fa-circle-notch fa-spin"></i> Đang đẩy lên GitHub...</button>
                     </div>
                 </div>
 
@@ -1234,7 +1231,7 @@
     <!-- Notification Toast Box -->
     <div id="toast-box" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white px-5 py-3 rounded-2xl shadow-2xl glass-card border border-white/20 text-xs sm:text-sm font-medium flex items-center gap-3 transition-all duration-300 transform -translate-y-20 opacity-0 pointer-events-none">
         <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
-        <span id="toast-msg">Đã tải ảnh lên GitHub thành công!</span>
+        <span id="toast-msg">Đã tải nhạc lên GitHub thành công!</span>
     </div>
 
     <!-- Firebase SDK Imports -->
