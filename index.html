@@ -1080,7 +1080,7 @@
 
             <div id="github-upload-progress" class="p-3.5 rounded-2xl liquid-item text-xs text-sky-200 flex items-center gap-3">
                 <i class="fa-solid fa-circle-notch fa-spin text-lg text-sky-300"></i>
-                <span id="github-upload-status-text">Đang đẩy file index.html lên GitHub...</span>
+                <span id="github-upload-status-text">Đang đồng bộ dữ liệu lên GitHub...</span>
             </div>
 
             <div class="space-y-6 pt-1">
@@ -1382,10 +1382,7 @@
                     </button>
                     <div class="flex gap-2">
                         <button onclick="closeAdminModal()" class="px-4 py-2.5 rounded-xl liquid-item text-white text-xs font-semibold">Hủy</button>
-                        <button id="btn-save-and-push" onclick="saveAndPushToGitHub()" class="px-5 py-2.5 rounded-xl liquid-orb-btn text-white text-xs font-bold flex items-center gap-2">
-                            <i class="fa-brands fa-github text-sm text-emerald-300"></i>
-                            <span>Lưu &amp; Đẩy thẳng lên GitHub</span>
-                        </button>
+                        <button id="btn-save-and-push" onclick="saveAndPushToGitHub()" class="px-5 py-2.5 rounded-xl liquid-orb-btn text-white text-xs font-bold flex items-center gap-2" disabled=""><i class="fa-solid fa-circle-notch fa-spin"></i> Đang đẩy lên GitHub...</button>
                     </div>
                 </div>
 
@@ -1394,7 +1391,7 @@
     </div>
 
     <!-- Notification Toast Box -->
-    <div id="toast-box" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 text-white px-5 py-3 rounded-full shadow-2xl liquid-glass text-xs sm:text-sm font-semibold flex items-center gap-3 transition-all duration-300 transform -translate-y-20 opacity-0 pointer-events-none">
+    <div id="toast-box" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 text-white px-5 py-3 rounded-full shadow-2xl liquid-glass text-xs sm:text-sm font-semibold flex items-center gap-3 transition-all duration-300 transform translate-y-0 opacity-100">
         <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-300 text-lg"></i>
         <span id="toast-msg">Đã tải ảnh lên GitHub thành công!</span>
     </div>
