@@ -512,7 +512,7 @@
         <div style="--section-delay: 0" class="stagger-section liquid-glass rounded-[34px] text-center relative overflow-hidden min-h-[360px] flex flex-col justify-end group/card">
             
             <!-- Unified Full-Card Image Background -->
-            <img id="profile-cover" src="assets/cover_1793657223930.png" alt="Profile Full Background" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover/card:scale-105 transition-transform duration-700 z-0 opacity-85" onerror="this.src='https://placehold.co/800x800/1e1b4b/f43f5e?text=GTA+5+Los+Santos+RP'">
+            <img id="profile-cover" src="assets/cover_1793892197599.png" alt="Profile Full Background" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center transform group-hover/card:scale-105 transition-transform duration-700 z-0 opacity-85" onerror="this.src='https://placehold.co/800x800/1e1b4b/f43f5e?text=GTA+5+Los+Santos+RP'">
 
             <!-- Unified Full-Card Video Background -->
             <video id="profile-cover-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" class="hidden absolute inset-0 w-full h-full object-cover object-center transform group-hover/card:scale-105 transition-transform duration-700 z-0 opacity-85"></video>
@@ -1080,7 +1080,7 @@
 
             <div id="github-upload-progress" class="p-3.5 rounded-2xl liquid-item text-xs text-sky-200 flex items-center gap-3">
                 <i class="fa-solid fa-circle-notch fa-spin text-lg text-sky-300"></i>
-                <span id="github-upload-status-text">Đang đồng bộ dữ liệu lên GitHub...</span>
+                <span id="github-upload-status-text">Đang đẩy file index.html lên GitHub...</span>
             </div>
 
             <div class="space-y-6 pt-1">
@@ -1148,7 +1148,7 @@
                         <div>
                             <label class="block text-xs font-medium text-slate-200 mb-1">Logo biểu trưng trên thanh địa chỉ (Favicon URL / Upload)</label>
                             <div class="flex gap-2 items-center">
-                                <img id="favicon-preview" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='pbGrad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2322d3ee'/%3E%3Cstop offset='50%25' stop-color='%2360a5fa'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3ClinearGradient id='pbInner' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2367e8f9'/%3E%3Cstop offset='50%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='115' fill='%23050507'/%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M148 372 V190 C148 152 176 132 218 132 H265 C308 132 332 158 332 198 C332 238 304 264 256 264 H195 C166 264 148 282 148 314 V372' stroke='url(%23pbGrad)' stroke-width='46'/%3E%3Cpath d='M238 228 V192 C238 154 268 132 315 132 C360 132 388 158 388 196 C388 226 368 248 338 254 C374 260 394 286 394 320 C394 356 364 372 312 372 H238 V292' stroke='url(%23pbGrad)' stroke-width='46'/%3E%3Cpath d='M148 372 V190 C148 152 176 132 218 132 H265 C308 132 332 158 332 198 C332 238 304 264 256 264 H195 C166 264 148 282 148 314 V372' stroke='url(%23pbInner)' stroke-width='20' opacity='0.85'/%3E%3Cpath d='M238 228 V192 C238 154 268 132 315 132 C360 132 388 158 388 196 C388 226 368 248 338 254 C374 260 394 286 394 320 C394 356 364 372 312 372 H238 V292' stroke='url(%23pbInner)' stroke-width='20' opacity='0.85'/%3E%3C/g%3E%3C/svg%3E" alt="Favicon" class="w-8 h-8 rounded-lg object-cover border border-white/30 bg-black flex-shrink-0" onerror="this.src=document.getElementById('site-favicon').href">
+                                <img id="favicon-preview" src="assets/favicon_1793892089263.png" alt="Favicon" class="w-8 h-8 rounded-lg object-cover border border-white/30 bg-black flex-shrink-0" onerror="this.src=document.getElementById('site-favicon').href">
                                 <input type="text" id="input-favicon" placeholder="Link hoặc đường dẫn ảnh logo..." class="w-full bg-white/10 border border-white/25 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-sky-400">
                                 <label for="admin-favicon-upload" class="px-3.5 py-2 rounded-xl liquid-orb-btn text-sky-200 text-xs font-semibold cursor-pointer flex items-center gap-1.5 flex-shrink-0">
                                     <i class="fa-solid fa-upload"></i> Upload Logo
@@ -1382,7 +1382,10 @@
                     </button>
                     <div class="flex gap-2">
                         <button onclick="closeAdminModal()" class="px-4 py-2.5 rounded-xl liquid-item text-white text-xs font-semibold">Hủy</button>
-                        <button id="btn-save-and-push" onclick="saveAndPushToGitHub()" class="px-5 py-2.5 rounded-xl liquid-orb-btn text-white text-xs font-bold flex items-center gap-2" disabled=""><i class="fa-solid fa-circle-notch fa-spin"></i> Đang đẩy lên GitHub...</button>
+                        <button id="btn-save-and-push" onclick="saveAndPushToGitHub()" class="px-5 py-2.5 rounded-xl liquid-orb-btn text-white text-xs font-bold flex items-center gap-2">
+                            <i class="fa-brands fa-github text-sm text-emerald-300"></i>
+                            <span>Lưu &amp; Đẩy thẳng lên GitHub</span>
+                        </button>
                     </div>
                 </div>
 
@@ -1393,7 +1396,7 @@
     <!-- Notification Toast Box -->
     <div id="toast-box" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 text-white px-5 py-3 rounded-full shadow-2xl liquid-glass text-xs sm:text-sm font-semibold flex items-center gap-3 transition-all duration-300 transform -translate-y-20 opacity-0 pointer-events-none">
         <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-300 text-lg"></i>
-        <span id="toast-msg">Đã tải ảnh lên GitHub thành công!</span>
+        <span id="toast-msg">Đã Lưu &amp; Đẩy thẳng lên GitHub thành công!</span>
     </div>
 
     <!-- Deferred Non-Blocking Visitor Counter for Instant GitHub Load -->
@@ -1437,7 +1440,7 @@
                     "title": "GTA 5 Roleplay Streamer 🎮",
                     "bio": "Đẹp trai, hài hước, văn minh nhưng thích cầm búa đi quậy Los Santos! Stream mỗi tối giao lưu cùng anh em.",
                     "avatar": "assets/avatar_1793819281333.png",
-                    "cover": "assets/cover_1793657223930.png",
+                    "cover": "assets/cover_1793892197599.png",
                     "avatarFrame": "frame-cyberpunk",
                     "bankName": "Timo Digital Bank by BVBank",
                     "bankOwner": "HOANG MINH PHUC",
@@ -1445,7 +1448,8 @@
                     "donateLink": "https://zypage.com/phucbua",
                     "qrImg": "assets/qr_1793892141296.jpg",
                     "favicon": "assets/favicon_1793892089263.png",
-                    "bgWallpaper": "pexels-eberhardgross-1624504.jpg"
+                    "bgWallpaper": "pexels-eberhardgross-1624504.jpg",
+                    "coverType": "image"
           },
           "music": {
                     "title": "bgm",
